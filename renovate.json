@@ -3,9 +3,23 @@
   "printConfig":true,
   "extends": ["config:base"],
   "packageRules": [
+    { 
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"], "automerge": true
+    },
     {
       "matchPackagePatterns": ["*"],
-      "allowedVersions": "!/redhat|composite|groovyless|jboss|atlassian|preview/"
+      "stabilityDays": 14
+    },
+    {
+      "groupName": "cloud-core-go-libs",
+      "matchPackagePatterns": ["github.com/gofiber/fiber"],
+      "stabilityDays": 0
     }
-  ]
+  ],
+  "postUpdateOptions":["gomodTidy"],
+  "recreateClosed": true,
+  "platformAutomerge": true,
+  "rebaseWhen": "conflicted",
+  "prCreation": "not-pending"
+  "internalChecksFilter: "strict"
 }
