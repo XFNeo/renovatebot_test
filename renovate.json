@@ -20,6 +20,6 @@
   "recreateClosed": true,
   "platformAutomerge": true,
   "rebaseWhen": "conflicted",
-  "prCreation": "not-pending"
+  "prCreation": "not-pending",
   "internalChecksFilter: "strict"
 }
