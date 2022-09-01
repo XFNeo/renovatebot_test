@@ -8,7 +8,7 @@
     },
     {
       "matchPackagePatterns": ["*"],
-      "stabilityDays": 14
+      "stabilityDays": 50
     },
     {
       "groupName": "cloud-core-go-libs",
